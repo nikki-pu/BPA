@@ -26,3 +26,14 @@ window.addEventListener('scroll', checkVisibility);
 
 // Initial check in case some events are already in view
 checkVisibility();
+
+
+// JavaScript to show the footer on scroll
+window.addEventListener("scroll", function() {
+    const footer = document.getElementById("scroll-footer");
+    if (window.scrollY > 200) { // Change 200 to whatever scroll distance you prefer
+        footer.classList.add("show");
+    } else {
+        footer.classList.remove("show");
+    }
+});
