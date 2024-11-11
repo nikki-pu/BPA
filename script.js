@@ -29,9 +29,11 @@ checkVisibility();
 
 
 // JavaScript to show the footer on scroll
+// JavaScript to show the footer when scrolling to the bottom
 window.addEventListener("scroll", function() {
     const footer = document.getElementById("scroll-footer");
-    if (window.scrollY > 200) { // Change 200 to whatever scroll distance you prefer
+    // Check if the user has scrolled to the bottom
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
         footer.classList.add("show");
     } else {
         footer.classList.remove("show");
