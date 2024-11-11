@@ -191,9 +191,7 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
-    display: none; /* Hidden by default */
     opacity: 0;
-    transition: opacity 0.5s ease; /* Smooth transition */
     
 }
 
@@ -201,7 +199,3 @@ body {
     margin: 5px 0;
 }
 
-.footer.show {
-    display: block;
-    opacity: 1;
-}
