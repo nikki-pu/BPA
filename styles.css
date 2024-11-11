@@ -207,3 +207,19 @@ body, html {
          transform: translateY(10px);
      }
  }
+
+.footer {
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    font-family: 'Lora', serif;
+    font-size: 0.9em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 5px 0;
+}
