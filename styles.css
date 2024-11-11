@@ -1,0 +1,209 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-image {
+    background: url('BackGroundImage.png') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.title {
+    margin-top: 20%;
+    font-size: 6rem;
+    font-family: 'unifrakturmaguntia', serif; /* For that gothic/old-style look */
+}
+
+.links {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.links li {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    font-family: 'unifrakturmaguntia', sans-serif;
+}
+
+.links li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.links li a:hover {
+    color: #750b0b;
+}
+
+/* Menu Icon */
+.menu-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-icon .bar {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+/* Overlay Menu */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s ease-in-out;
+    z-index: 9999;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.overlay-content a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-family: lobster;
+}
+
+.overlay-content a:hover {
+    color: #f1f1f1;
+}
+
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .links li {
+        font-size: 1rem;
+    }
+
+    .overlay-content a {
+        font-size: 24px;
+    }
+
+    .closebtn {
+        font-size: 40px;
+    }
+}
+.timeline-background{
+    background-image: url('timeline.png');
+     
+    background-size: cover; /* Cover the entire .timeline area */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Fixed for a parallax effect */
+    position: relative;
+    border-radius: 10px; /* Optional: rounded corners */
+}
+.timeline {
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    
+     /* Replace with your background image path */
+    /* Fixed for a parallax effect */
+    position: relative;
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: shadow for depth */
+}
+
+.timeline-event {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #C0C0C0;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.timeline-event h2 {
+    font-size: 1.8rem;
+    color: black; /* Accent color for year titles */
+    margin-bottom: 10px;
+    font-family: lobster;
+}
+
+.timeline-event p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color:black;
+    font-family: lora, serif;
+}
+
+/* Visible state for pop-in effect */
+.timeline-event.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+ .scroll-down {
+     position: absolute;
+     bottom: 30px;
+     left: 50%;
+     transform: translateX(-50%);
+     font-size: 2rem;
+     color: white;
+     animation: bounce 2s infinite;
+     cursor: pointer;
+     font-family: 'Arial', sans-serif;
+     opacity: 0.7;
+ }
+
+ @keyframes bounce {
+     0%, 100% {
+         transform: translateY(0);
+     }
+     50% {
+         transform: translateY(10px);
+     }
+ }

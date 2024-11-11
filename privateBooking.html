@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Booking Form</title>
+    <link rel="stylesheet" href="privateBooking.css">
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- Full Screen Menu -->
+    <div id="overlay-menu" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="aboutme.html">About</a>
+            <a href="tourDates.html">Tour</a>
+            <a href="merch.html">Merch</a>
+            <a href="privateBooking.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h1>Private Booking</h1>
+        <form id="bookingForm">
+            <input type="text" name="firstName" placeholder="First name*" required>
+            <input type="text" name="lastName" placeholder="Last name" required>
+            <input type="email" name="email" placeholder="Email*" required>
+            <input type="text" name="phone" placeholder="Phone">
+            <input type="date" name="eventDate" placeholder="Event date" required>
+            <input type="submit" value="Submit">
+        </form>
+        <div class="popup-message" id="thankYouMessage">
+            Thank you for your submission. We will contact you shortly.
+        </div>
+        
+        <!-- Instagram Link -->
+        <div class="instagram-link">
+            <a href="https://www.instagram.com/stagefright.team8" target="_blank">
+                <img src="instagram.png" alt="Instagram Profile">
+            </a>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <p><a href="mailto:stagefight.team8@gmail.com">stagefight.team8@gmail.com</a></p>
+            <p> <a href="tel:+12143953830">(214) 395-3830</a></p>
+        </div>
+    </div>
+
+    <script src="privateBooking.js"></script>
+</body>
+</html>

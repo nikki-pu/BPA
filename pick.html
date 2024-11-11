@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stage Fright T-Shirt</title>
+  <link rel="stylesheet" href="pick.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="menu-icon" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+      </div>
+
+      <!-- Full Screen Menu -->
+      <div id="overlay-menu" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+          <div class="overlay-content">
+              <a href="index.html">Home</a>
+              <a href="aboutme.html">About</a>
+              <a href="tourDates.html">Tour</a>
+              <a href="merch.html">Merch</a>
+              <a href="privateBooking.html">Contact</a>
+          </div>
+      </div>
+  </div>
+  <div class="product-page">
+    <div class="product-image">
+      <img src="pick.png" alt="Stage Fright Guitar Pick">
+    </div>
+    <div class="product-details">
+      <h1>Stage Fright Guitar Pick</h1>
+      <p>$3.99</p>
+      <ul>
+        <li>Versatile Guitar Pick</li>
+        <li>Bold "Stage Fright" graphic</li>
+        <li>Metallic, Rock Insipred Lettering</li>
+        <li>All sales are final</li>
+      </ul>
+
+      
+
+      <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div class="cart-icon" onclick="toggleCart()">
+      <img src="Cart.png" alt="Cart">
+    </div>
+  </div>
+
+  <!-- Cart Popup -->
+  <div class="cart-popup" id="cartPopup">
+    <button class="close-cart" onclick="toggleCart()">X</button>
+    <div class="cart-content">
+      <h2>Shopping Cart</h2>
+      <div id="cartItems"></div>
+      <p>Total: $<span id="totalPrice">0.00</span></p>
+      <a href="checkout1.html" class="checkout-btn">Checkout Now</a>
+    </div>
+  </div>
+
+  <!-- Thank You Popup -->
+  <div class="thank-you-popup" id="thankYouPopup">
+    <p>Thank you for your purchase!</p>
+    <button onclick="closeThankYouPopup()">Close</button>
+  </div>
+
+  <script src="pick.js"></script>
+</body>
+</html>

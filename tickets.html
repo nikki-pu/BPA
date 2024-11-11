@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket Selection</title>
+  <link rel="stylesheet" href="tickets.css">
+</head>
+<body>
+
+<div id="ticketPage">
+  <img src="seating.png" alt="Seating Map" id="seatMap">
+
+  <!-- Section Buttons (No text on buttons) -->
+  <button id="generalAdmissionBtn" class="section-button" onclick="openPopup('General Admission', 25)"></button>
+  <button id="balconyRightBtn" class="section-button" onclick="openPopup('Balcony Right', 30)"></button>
+  <button id="balconyCenterBtn" class="section-button" onclick="openPopup('Balcony Center', 35)"></button>
+  <button id="balconyLeftBtn" class="section-button" onclick="openPopup('Balcony Left', 30)"></button>
+</div>
+
+<!-- Ticket Selection Popup -->
+<div class="popup" id="popup">
+  <h2 id="sectionTitle">Ticket</h2>
+  <label for="quantity">Select Amount</label>
+  <select id="quantity" onchange="updatePrice()">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+  <p id="ticketPrice">Price: $0.00</p>
+  <button onclick="openCheckoutPopup()">Purchase Tickets</button>
+</div>
+
+<!-- Checkout Popup for User Info -->
+<div class="checkout-popup" id="checkoutPopup">
+  <h2>Checkout</h2>
+  <p>Fill out your information to complete the purchase.</p>
+  <label for="fullName">Full Name</label>
+  <input type="text" id="fullName" placeholder="Enter full name">
+  
+  <label for="cardNumber">Credit Card Number</label>
+  <input type="text" id="cardNumber" placeholder="Enter credit card number">
+  
+  <label for="ccv">CCV Number</label>
+  <input type="text" id="ccv" placeholder="Enter CCV number">
+
+  <p id="totalPrice">Total Price: $0.00</p>
+  
+  <button onclick="processPayment()">Pay</button>
+  <p id="successMessage" style="display: none; color: green; margin-top: 10px;">Payment Successful!</p>
+</div>
+
+<!-- Overlay for both popups -->
+<div class="overlay" id="overlay" onclick="closePopup()"></div>
+
+<script src="tickets.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+body {
+  font-family: Lora, serif;
+  background-image: url('BackGroundImageTwo.png');
+  background-size: cover;
+  background-position: center;
+  color: #000;
+  padding: 20px;
+}
+
+.tour-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.tour-dates-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tour-dates-grid div {
+  padding: 5px;
+}
+
+.tour-dates-grid a {
+  color: blue;
+  text-decoration: none;
+}
+
+.tour-dates-grid a:hover {
+  text-decoration: underline;
+}
+.menu-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-icon .bar {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+/* Overlay Menu */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s ease-in-out;
+  z-index: 9999;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay-content a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  font-family: lobster;
+}
+
+.overlay-content a:hover {
+  color: #f1f1f1;
+}
+
+.closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .title {
+      font-size: 3rem;
+  }
+
+  .links li {
+      font-size: 1rem;
+  }
+
+  .overlay-content a {
+      font-size: 24px;
+  }
+
+  .closebtn {
+      font-size: 40px;
+  }
+}

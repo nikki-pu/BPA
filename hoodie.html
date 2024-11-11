@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stage Fright T-Shirt</title>
+  <link rel="stylesheet" href="hoodie.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="menu-icon" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+  </div>
+
+  <!-- Full Screen Menu -->
+  <div id="overlay-menu" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+      <div class="overlay-content">
+          <a href="index.html">Home</a>
+          <a href="aboutme.html">About</a>
+          <a href="tourDates.html">Tour</a>
+          <a href="merch.html">Merch</a>
+          <a href="privateBooking.html">Contact</a>
+      </div>
+  </div>
+
+  <div class="product-page">
+    <div class="product-image">
+      <!-- Left Arrow for Back Image -->
+      <button onclick="toggleImage('left')" class="arrow left-arrow">&#x2190;</button>
+
+      <!-- T-Shirt Image -->
+      <img id="productImage" src="hoodie.png" alt="Stage Fright T-Shirt Front" style="width: 300px;">
+
+      <!-- Right Arrow for Front Image -->
+      <button onclick="toggleImage('right')" class="arrow right-arrow">&#x2192;</button>
+    </div>
+
+    <div class="product-details">
+      <h1>Stage Fright Hoodie</h1>
+      <p>$25.99</p>
+      <ul>
+        <li>Dark Grey Graphic Hoodie</li>
+        <li>Bold "Stage Fright" graphic</li>
+        <li>100% cotton material</li>
+        <li>All sales are final</li>
+      </ul>
+
+      <div class="quantity-section">
+        <label for="size">Size:</label>
+        <select id="size">
+          <option value="XS">XS</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+      </div>
+
+      <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+
+      <div class="cart-icon" onclick="toggleCart()">
+          <img src="Cart.png" alt="Cart">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Cart Popup -->
+  <!-- Cart Popup -->
+  <div class="cart-popup" id="cartPopup">
+    <button class="close-cart" onclick="toggleCart()">X</button>
+    <div class="cart-content">
+      <h2>Shopping Cart</h2>
+      <div id="cartItems"></div>
+      <p>Total: $<span id="totalPrice">0.00</span></p>
+      <!-- Updated button to link to checkout.html -->
+      <a href="checkout1.html" class="checkout-btn">Checkout Now</a>
+    </div>
+  </div>
+
+
+
+  <script src="hoodie.js"></script>
+  <script>
+    let isFrontImage = true;
+
+    function toggleImage(direction) {
+      const productImage = document.getElementById("productImage");
+
+      if (direction === 'right' && isFrontImage) {
+        productImage.src = "hoodie-back.png"; // Show back image
+        productImage.alt = "Stage Fright T-Shirt Back";
+        isFrontImage = false;
+      } else if (direction === 'left' && !isFrontImage) {
+        productImage.src = "hoodie.png"; // Show front image
+        productImage.alt = "Stage Fright T-Shirt Front";
+        isFrontImage = true;
+      }
+    }
+  </script>
+</body>
+</html>

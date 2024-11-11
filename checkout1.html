@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+  <div class="checkout-container">
+    <!-- Left side: Checkout form -->
+    <div class="checkout-form">
+      <h1>Checkout</h1>
+      <p>Fill out your information so you can purchase your order.</p>
+
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" placeholder="Enter full name">
+
+      <label for="cardNumber">Credit Card Number</label>
+      <input type="text" id="cardNumber" placeholder="Enter credit card number">
+
+      <label for="ccvNumber">CCV Number</label>
+      <input type="text" id="ccvNumber" placeholder="Enter CCV number">
+
+      <button class="pay-btn" onclick="processPayment()">Pay</button>
+      <p class="confirmation-text">By confirming your payment, you agree to our terms.</p>
+    </div>
+
+    <!-- Right side: Cart summary -->
+    <div class="cart-summary">
+      <h2><span id="itemCount">0</span> items added to cart</h2>
+      <div id="cartItems"></div>
+      <p class="subtotal">Subtotal: $<span id="subtotal">0.00</span></p>
+
+      <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+      <button class="continue-shopping-btn" onclick="goToMerch()">Continue Shopping</button>
+    </div>
+  </div>
+
+  <!-- Success Popup -->
+  <div class="success-popup" id="successPopup">
+    <p>Success! Your order has been placed.</p>
+    <button onclick="closeSuccessPopup()">OK</button>
+  </div>
+
+  <script src="checkout.js"></script>
+</body>
+</html>

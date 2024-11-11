@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Stage Fright</title>
+    <link rel="stylesheet" href="aboutme.css">
+     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="background-image"></div>
+
+        <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <!-- Full Screen Menu -->
+            <div id="overlay-menu" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+                <div class="overlay-content">
+                    <a href="index.html">Home</a>
+                    <a href="aboutme.html">About</a>
+                    <a href="tourDates.html">Tour</a>
+                    <a href="merch.html">Merch</a>
+                    <a href="privateBooking.html">Contact</a>
+                </div>
+            </div>
+        </div>
+
+    
+        <h1 class="title">Members</h1>
+
+        <div class="members-grid">
+            <!-- Band Member 1 -->
+            <div class="member-card" onclick="openModal('riff-modal')">
+                <img src="zane.png" alt="Riff" class="member-img">
+                <h2>Riff</h2>
+                <p>Jaxon Rivers</p>
+                <div class="music-player">
+                    <img src="backward.png" alt="Backward Button" class="icon">
+                    <img src="play.png" alt="Play Button" class="icon">
+                    <img src="forward.png" alt="Forward Button" class="icon">
+                </div>
+                <div class="song-progress">
+                    <img src="progress-line.png" alt="Song Progress">
+                </div>
+            </div>
+
+            <!-- Band Member 2 -->
+            <div class="member-card" onclick="openModal('echo-modal')">
+                <img src="echo.png" alt="Echo" class="member-img">
+                <h2>Echo</h2>
+                <p>Zane Wilde</p>
+                <div class="music-player">
+                    <img src="backward.png" alt="Backward Button" class="icon">
+                    <img src="play.png" alt="Play Button" class="icon">
+                    <img src="forward.png" alt="Forward Button" class="icon">
+                </div>
+                <div class="song-progress">
+                    <img src="progress-line.png" alt="Song Progress">
+                </div>
+            </div>
+
+            <!-- Band Member 3 -->
+            <div class="member-card" onclick="openModal('vibe-modal')">
+                <img src="luna.png" alt="Vibe" class="member-img">
+                <h2>Vibe</h2>
+                <p>Luna Vega</p>
+                <div class="music-player">
+                    <img src="backward.png" alt="Backward Button" class="icon">
+                    <img src="play.png" alt="Play Button" class="icon">
+                    <img src="forward.png" alt="Forward Button" class="icon">
+                </div>
+                <div class="song-progress">
+                    <img src="progress-line.png" alt="Song Progress">
+                </div>
+            </div>
+
+            <!-- Band Member 4 -->
+            <div class="member-card" onclick="openModal('crash-modal')">
+                <img src="crash.png" alt="Crash" class="member-img">
+                <h2>Crash</h2>
+                <p>Kai Carson</p>
+                <div class="music-player">
+                    <img src="backward.png" alt="Backward Button" class="icon">
+                    <img src="play.png" alt="Play Button" class="icon">
+                    <img src="forward.png" alt="Forward Button" class="icon">
+                </div>
+                <div class="song-progress">
+                    <img src="progress-line.png" alt="Song Progress">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Structure for each member -->
+    <div id="riff-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('riff-modal')">&times;</span>
+            <h1>A bold and edgy guitarist with a flair for shredding solos</h1>
+            <h3>Background & Early Beginnings</h3>
+            <p>
+            Jaxon "Riff" Rivers grew up immersed in classic rock and blues, thanks to his father’s vinyl collection of legends like Jimi Hendrix and Led Zeppelin. At 12, he picked up an old acoustic guitar and quickly advanced from basic chords to complex solos. By 14, he had saved up for an electric guitar, spending countless hours perfecting his technique, inspired by guitar icons like Eddie Van Halen. </p>
+            <h3>Journey into Music:</h3>
+            <p>Jaxon gained a local reputation as a guitar prodigy, electrifying audiences with his intense stage presence and technical prowess. After joining various bands, he formed his own, taking on the role of lead guitarist and creative force. His powerful solos and high-energy performances made him a standout, drawing attention for his ability to fuse classic and modern rock sounds.</p>
+           <h3>Musical Style:</h3>
+            <p> Known for his explosive solos, heavy distortion, and intricate melodies, Jaxon’s style blends classic rock with alternative and metal influences. His playing is a mix of high-speed shredding and emotional phrasing, creating dynamic, unpredictable solos that captivate audiences. </p>
+            <h3>Personality:</h3>
+            <p>Off-stage, Jaxon is introspective and constantly thinking about new ways to evolve his sound. On stage, he’s a bold and fearless performer, fully embodying the rockstar spirit with his edgy, captivating presence.
+            Jaxon "Riff" Rivers is a guitarist with a natural flair for shredding solos, quickly rising as a force in modern rock.
+</p>
+        </div>
+    </div>
+
+    <div id="echo-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('echo-modal')">&times;</span>
+            <h1>The quiet, mysterious bassist who holds it all together</h1>
+                        <h3>Background & Early Beginnings</h3>
+                        <p>
+                            Zane "Echo" Wilde was always drawn to the deeper, quieter side of music. While others chased the spotlight, Zane found comfort in the bass, the instrument that holds everything together in the background. Growing up listening to bands like Pink Floyd and The Cure, Zane admired how the bass created the foundation for a song, often overlooked but always essential. He started playing at a young age, mastering the subtle art of rhythm and groove. </p>
+                        <h3>Journey into Music:</h3>
+                        <p>Zane’s calm and introspective nature made him the anchor in every band he played with. While his bandmates brought the chaos and energy, Zane provided the steady, driving force that kept it all together. His ability to create complex, groove-heavy basslines with minimal fuss earned him a reputation as the quiet genius of the group. Though he avoids the spotlight, Zane’s presence is felt in every note, ensuring the music stays grounded and in harmony.</p>
+                       <h3>Musical Style:</h3>
+                        <p> Zane’s playing is smooth, rhythmic, and deeply melodic. He doesn’t play to stand out but to elevate the entire sound, crafting intricate basslines that blend seamlessly with the rest of the band. His style is understated yet essential, providing the groove and structure that keeps the music flowing. Zane’s basslines are the glue that holds every song together, adding depth without overpowering.
+ </p>
+                        <h3>Personality:</h3>
+                        <p>Zane is the quiet, mysterious member of the band. While his bandmates might command attention on stage, Zane is content to stay in the shadows, letting his music do the talking. Off-stage, he’s introspective and thoughtful, often lost in his own world, but always there when the band needs him. He’s the steady hand that ensures everything runs smoothly, never needing to be loud to make an impact.
+                            Zane "Echo" Wilde is the quiet force behind the band’s music, providing the structure and groove that hold everything together, making him the essential, if often unsung, hero of the group.
+
+            </p>
+        </div>
+    </div>
+
+    <div id="vibe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('vibe-modal')">&times;</span>
+            <h1>The powerful and charismatic lead singer with a hypnotic stage presence</h1>
+                                    <h3>Background & Early Beginnings</h3>
+                                    <p>
+                                    Luna "Vibe" Vega grew up surrounded by various musical influences, from soulful R&B to alternative rock, which shaped her unique vocal style. She started singing young, captivating those around her with a natural, raw talent. Luna was never just a singer—she was a performer, fully immersing herself in the emotion of every song. Inspired by powerhouse vocalists like Janis Joplin and Amy Winehouse, she honed her craft, blending grit with melody, passion with control. </p>
+                                    <h3>Journey into Music:</h3>
+                                    <p>Luna’s journey into music began in small clubs and open mics, where her voice and presence quickly set her apart. With a natural gift for connecting with audiences, Luna became the charismatic focal point of the band. Her voice, both soulful and commanding, draws people in, while her magnetic stage presence leaves them in awe. Whether belting out rock anthems or delivering quiet, intimate moments, Luna knows how to create a vibe that resonates deeply with the crowd.
+</p>
+                                   <h3>Musical Style:</h3>
+                                    <p> Luna’s voice is powerful yet versatile, with a range that can shift from raw, raspy rock vocals to smooth, soulful melodies. Her singing is both emotionally charged and technically skilled, making each performance feel intense and personal. Luna’s lyrics often reflect vulnerability, empowerment, and the human experience, blending perfectly with the band’s dynamic sound. She uses her voice like an instrument, shaping the mood of each song with precision and passion.
+
+             </p>
+                                    <h3>Personality:</h3>
+                                    <p>Off-stage, Luna is warm, confident, and unapologetically herself. She’s the kind of person who lights up a room with her presence, effortlessly drawing people in with her energy. On stage, Luna is a force of nature, commanding attention with every note and move. Her hypnotic presence and ability to channel emotion make her the heartbeat of the band, creating a vibe that captivates everyone in the room.
+                                        Luna "Vibe" Vega is the powerful, charismatic lead vocalist whose hypnotic stage presence and emotional depth make every performance unforgettable, leaving audiences completely under her spell.
+
+
+                        </p>
+           
+        </div>
+    </div>
+
+    <div id="crash-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('crash-modal')">&times;</span>
+            <h1>The energetic and explosive drummer with a wild side</h1>
+                                                <h3>Background & Early Beginnings</h3>
+                                                <p>
+            Kai "Crash" Carson grew up with a rebellious streak, constantly drawn to the loud and chaotic energy of rock music. As a kid, he started out banging on anything he could find—pots, pans, walls—until his parents finally got him a drum set. From that moment, Kai was hooked. Inspired by legendary drummers like John Bonham and Dave Grohl, he spent hours honing his craft, developing his signature aggressive style.
+                                                <h3>Journey into Music:</h3>
+                                                <p>Kai’s explosive drumming quickly earned him a reputation as the wild heartbeat of every band he joined. His high-energy performances, complete with wild fills and show-stopping solos, made him a standout in the local music scene. Known for smashing through drum kits and pushing the limits of rhythm, Kai soon became the band's backbone, delivering thunderous beats that drove their sound.
+
+            </p>
+                                               <h3>Musical Style:</h3>
+                                                <p> Kai’s drumming is fast, loud, and relentless. He combines hard-hitting rock rhythms with chaotic, unpredictable fills that bring an edge to every song. His playing style is raw and intense, with a strong focus on power and energy, ensuring the audience feels every beat in their chest.
+
+
+                         </p>
+                                                <h3>Personality:</h3>
+                                                <p>Off-stage, Kai is the band’s joker, always up for fun and mischief, but with a deep passion for his craft. On stage, he’s a force of nature—wild, unpredictable, and completely in his element behind the drum kit. His explosive energy is infectious, making him the pulse of the band’s performances.
+
+                                                    Kai "Crash" Carson is the powerhouse drummer who brings chaos and energy to the band, with an unpredictable and wild playing style that perfectly matches his larger-than-life personality.
+
+
+
+                                    </p>
+                    
+        </div>
+    </div>
+
+    <script>
+        // Function to open the modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        // Function to close the modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Close the modal when clicking outside the modal content
+        window.onclick = function(event) {
+            var modals = document.getElementsByClassName('modal');
+            for (let modal of modals) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            }
+        }
+    </script>
+    <script src="aboutme.js"></script>
+</body>
+</html>

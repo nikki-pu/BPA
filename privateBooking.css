@@ -1,0 +1,182 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Background Styling */
+body {
+    background: url('BackGroundImageTwo.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form Container */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+}
+
+.form-container h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Submit Button Styling */
+.form-container input[type="submit"] {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #333;
+}
+
+/* Popup Message */
+.popup-message {
+    display: none;
+    margin-top: 20px;
+    font-size: 18px;
+    color: green;
+}
+
+.menu-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-icon .bar {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+/* Overlay Menu */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s ease-in-out;
+    z-index: 9999;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.overlay-content a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-family: lobster;
+}
+
+.overlay-content a:hover {
+    color: #f1f1f1;
+}
+
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .links li {
+        font-size: 1rem;
+    }
+
+    .overlay-content a {
+        font-size: 24px;
+    }
+
+    .closebtn {
+        font-size: 40px;
+    }
+}
+
+.instagram-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.instagram-link img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.instagram-link img:hover {
+    transform: scale(1.1); 
+}
+
+/* Contact Info Styling */
+.contact-info {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: black;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}

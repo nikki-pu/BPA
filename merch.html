@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merch Home</title>
+    <link rel="stylesheet" href="merch.css">
+</head>
+<body>
+    <!-- Menu Icon for Opening Overlay Menu -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- Full Screen Overlay Menu -->
+    <div id="overlay-menu" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="aboutme.html">About</a>
+            <a href="tourDates.html">Tour</a>
+            <a href="merch.html">Merch</a>
+            <a href="privateBooking.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Background Merch Image -->
+        <img src="merch-image.png" alt="Merch Image" class="merch-image">
+
+        <!-- Interactive Buttons on Image -->
+        <a href="pick.html" class="button" style="top: 57%; left: 10%;" data-label="Guitar Pick"></a>
+        <a href="t-shirt.html" class="button" style="top: 40%; left: 51%;" data-label="T-Shirt"></a>
+        <a href="hat.html" class="button" style="top: 92%; left: 23%;" data-label="Hat"></a>
+        <a href="hoodie.html" class="button" style="top: 37%; left: 61%;" data-label="Hoodie"></a>
+        <a href="poster.html" class="button" style="top: 42%; left: 72%;" data-label="Poster"></a>
+    </div>
+    <script src="merch.js"></script>
+</body>
+</html>
