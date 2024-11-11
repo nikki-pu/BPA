@@ -222,7 +222,7 @@ body, html {
     display: none; /* Hidden by default */
     opacity: 0;
     transition: opacity 0.5s ease; /* Smooth transition */
-    padding-bottom: 100px;
+    
 }
 
 .footer p {
