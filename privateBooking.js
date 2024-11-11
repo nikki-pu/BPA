@@ -13,15 +13,3 @@ function toggleMenu() {
     }
 }
 // JavaScript to show the footer only when scrolling all the way to the bottom
-window.addEventListener("scroll", function() {
-    const footer = document.getElementById("scroll-footer");
-    const scrollPosition = window.scrollY + window.innerHeight;
-    const documentHeight = document.documentElement.scrollHeight;
-
-    // Show footer only when reaching the very bottom
-    if (scrollPosition >= documentHeight - 5) { // Allow a small threshold
-        footer.classList.add("show");
-    } else {
-        footer.classList.remove("show");
-    }
-});
