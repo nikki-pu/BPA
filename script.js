@@ -6,7 +6,7 @@ function toggleMenu() {
         menu.style.width = "100%";
     }
 }
-// Select all timeline events
+
 const timelineEvents = document.querySelectorAll('.timeline-event');
 
 function checkVisibility() {
@@ -21,10 +21,10 @@ function checkVisibility() {
     });
 }
 
-// Trigger checkVisibility on scroll
+
 window.addEventListener('scroll', checkVisibility);
 
-// Initial check in case some events are already in view
+
 checkVisibility();
 
 
